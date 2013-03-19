@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * Description here.
+ */
+
+/**
+ * hook_menu
+ */
+function xs_menu() {
+  $items = array();
+  $items['admin/config/xs'] = array(
+    'title' => 'xs config',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('xs_config_form'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'xs.admin.inc',
+  );
+
+  // return $items;
+}

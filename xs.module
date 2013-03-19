@@ -19,3 +19,22 @@ function xs_menu() {
 
   // return $items;
 }
+/* */
+function xs_form_alter(&$form, &$form_state) {
+  // TODO: find a clever way of listing forms where to use / not use it
+  $form['xsxtrainfo'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Important info',
+    '#attributes' => array('class' => array('xsxtra')),
+    //'hidden' => true,
+  );
+  // TODO: should we do this in validation instead ?
+  array_unshift($form['#submit'], 'xs_submit');
+  
+  ctools_add_css('xs','xs');
+}
+// */
+
+function xs_submit(&$form, &$form_state) {
+  // check if they provided any info, if yes, ask them if they're human or what
+}

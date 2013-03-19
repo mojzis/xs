@@ -1,5 +1,5 @@
 name = xs 
-description = 
+description = spam anihilator :)
 core = 7.x
-#dependencies[] = devel
+dependencies[] = ctools
 #configure = admin/config/xs
